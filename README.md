@@ -38,4 +38,3 @@ blog.sh category add category21
 blog.sh category list
 blog.sh category assign 2 2
 blog.sh post add title22 content22 --category category22
-
