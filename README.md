@@ -1,9 +1,9 @@
 # Mycustomwork
 Narayan Ubale (mycustomwork)
 
-** Run Script as Root user
+*Run Script as Root user
 
-Web Server Setup for WordPress
+*Web Server Setup for WordPress
 Command-line script (Ubuntu 14.04.5 LTS)
 
 How run
@@ -19,7 +19,7 @@ bash wplemp.sh domain.example1
 bash wplemp.sh domain.example2
 bash wplemp.sh domain.example3
 
-Blogging Command-Line App
+*Blogging Command-Line App
 Command-line blogging application using sqlite (Ubuntu 14.04.5 LTS)
 
 How Use
