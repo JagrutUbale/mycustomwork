@@ -24,6 +24,7 @@ for pkg in $packages; do
 done
 service mysql restart >> /tmp/tasks
 mysql --user=root --password=root -e "CREATE DATABASE wordpress; GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'wordpress'; FLUSH PRIVILEGES;" >> /tmp/tasks
+
 mkdir -p "/var/www/$1"  
 echo "127.0.0.1 $1" >> /etc/hosts
 cat <<EOF> /etc/nginx/sites-available/$1
@@ -44,6 +45,7 @@ server {
                 log_not_found off;
                 access_log off;
         }
+
         location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
                 expires max;
                 log_not_found off;
@@ -57,15 +59,17 @@ server {
                 try_files \$uri =404;
                 fastcgi_pass unix:/run/php/php7.0-fpm.sock;
                 fastcgi_index index.php;
-                fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+                fastcgi_param SCRIPT_FILENAME \$document_root/\$fastcgi_script_name;
                 include fastcgi_params;
         } 
 }
 EOF
 ln -sf /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/$1
 rm /etc/nginx/sites-enabled/default
+
 chown -R www-data:www-data /var/www/$1
 chmod -R g+s /var/www/$1
+
 cd /var/www/
 wget http://wordpress.org/latest.tar.gz >> /tmp/tasks
 tar -xvf latest.tar.gz >> /tmp/tasks
