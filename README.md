@@ -4,7 +4,7 @@
 **Run Script as Root user**
 
 **Web Server Setup for WordPress**
-Command-line script (Ubuntu 16.04)
+Command-line script (**Ubuntu 16.04**)
 
 How run
 + git clone https://github.com/JagrutUbale/mycustomwork.git
@@ -13,7 +13,7 @@ How run
 + ./wplemp_ubuntu1604.sh example.com
 
 **Web Server Setup for WordPress**
-Command-line script (Ubuntu 14.04.5 LTS)
+Command-line script (**Ubuntu 14.04.5 LTS**)
 
 How run
 + git clone https://github.com/JagrutUbale/mycustomwork.git
