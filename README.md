@@ -4,15 +4,22 @@
 **Run Script as Root user**
 
 **Web Server Setup for WordPress**
+Command-line script (Ubuntu 16.04)
+
+How run
++ git clone https://github.com/JagrutUbale/mycustomwork.git
++ cd mycustomwork
++ chmod +x *
++ ./wplemp_ubuntu1604.sh example.com
+
+**Web Server Setup for WordPress**
 Command-line script (Ubuntu 14.04.5 LTS)
 
 How run
-+ Download wplemp.sh
-+ chmod +x wplemp.sh
-+ ./wplemp.sh domainname
-Try Below Example
-+ ./wplemp.sh domain.example
-+ bash wplemp.sh domain.example
++ git clone https://github.com/JagrutUbale/mycustomwork.git
++ cd mycustomwork
++ chmod +x *
++ ./wplemp.sh example.com
 
 Benefit: To create multiple WordPress LAMP setup on single with multiple domain/hostname name
 + bash wplemp.sh domain.example1
